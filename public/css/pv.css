@@ -1,0 +1,215 @@
+
+  .cuadricula{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 18px;
+    grid-auto-columns: minmax(auto);
+  }
+   
+  /*--> Seccion notificacion*/
+    .notificacion{
+      grid-column: 6 span;
+      background-color: #D04848;
+      color: #ffffff;
+      border-radius:6px;
+      padding: 8px;    
+    }
+
+    .notificacion.exito{
+      background-color: #0DA574;
+    }
+    
+    .alineacion{
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      position: relative;
+    }
+
+    .alineacion .btn-close{
+      position: absolute;
+      right: 0;
+      padding:2px;
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+
+    .notificacion .btn-close{
+      background-color: #D04848;
+      border:none;
+    } 
+
+    .notificacion.exito .btn-close{
+      background-color: #0DA574;
+      border:none;
+    }
+
+    .notificacion.close{
+      display: none;
+    }
+  /*<-- Seccion notificacion*/
+
+  /*--> Componente cuadro*/
+    .cuadro{
+      background-color: #3C3C3C;/*color de cuadro*/
+      border-radius: 10px;
+      text-align: justify;
+      min-width: 15rem;
+    }
+    .cuadro .cuadro-content{
+      padding: 17px;
+      padding-top: 17px;/*separacion de parte superior*/
+    }
+  
+  /*<-- Componente cuadro*/
+
+  /*Definir espacio*/
+  #cuadro-1{
+    grid-column: 6 span;
+  }
+  #cuadro-2{
+    grid-column: 6 span;
+  }
+  
+  
+  .filtro-items{
+    width:100%;
+    font-size: .9rem;
+    color: #FFFFFF;
+    border: 1px solid  #282929;
+    background-color: #282929;/*color de campo busqueda*/
+    border-radius: .4rem;
+    padding: .6rem .2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /*--> Seccion tabla productos*/
+    .cuadro table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    .cuadro table th, td {
+      padding: 4.8px;
+      text-align: left;
+      /*nota: bordes de tabla*/
+      border-bottom: 2px solid #A6A6A6;
+    }
+    
+    .cuadro table th {
+      background-color: #3C3C3C;/*color de cabecera de tabla*/
+      position: sticky;
+      top: 0; 
+      border-bottom: none;
+    }
+    
+    .cuadro table th::after{
+      content: '';
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #A6A6A6;
+    }
+    
+    
+    .cuadro .campo-tabla{
+      overflow-y:scroll;
+      padding: 1.4rem 0;
+      padding-top: 0;
+      margin: 0 auto;
+    }
+
+    .cuadro .campo-tabla.tabla_productos{
+      height: 18vh;
+    }
+    .cuadro .campo-tabla.tabla_ticket{
+      height: 35vh;
+    }
+    
+    
+    table .btn-agregar{
+      font-size: 18px;
+      font-weight: bold;
+      padding: 5px 15px;
+      color: #ffffff;
+      background-color: #0DA574;/*color de boton agregar*/
+      border: 1px solid #0DA574;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    
+    .cuadro #cuadro th:nth-child(2),
+    .cuadro #productos-table td:nth-child(2) {
+      /*nota: columna 2*/
+      text-align: left;
+    }
+    /*<-- Seccion tabla productos*/
+  
+  /*--> Seccion tabla ticket*/
+    #ticket-table .entrada-dato{
+      color:#FFFFFF;
+      border: 1px solid  #737373;
+      background-color: #737373;/*color campo de entrada*/
+      border-radius: 6px;
+      padding: 7px 2px;
+      font-size: 16px;
+    }
+    
+    #ticket-table .entrada-dato.cantidad{
+      text-align: center;
+      width: 100px;
+    }
+    
+    .cuadro #ticket-table th:nth-child(1),
+    .cuadro #ticket-table td:nth-child(1) {
+      /*nota: columna 1*/
+      width: 20%;
+    }
+    .cuadro #ticket-table th:nth-child(3),
+    .cuadro #ticket-table td:nth-child(3) {
+      /*nota: columna 3*/
+      text-align: center;
+    }
+  /*<-- Seccion tabla ticket*/
+  
+  table .btn-delete{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 15px;
+    color: #ffffff;
+    background-color: #D04848;
+    border: 1px solid #D04848;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .texto-total{
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .cuadro .btn-listo{
+    color: #ffffff;
+    background-color:#FFB000; /*color de boton listo*/   
+    border: 1px solid #FFB000;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 10px;
+    width: 100%;
+  }
+  
+  /*En dispositivos moviles*/
+  @media only screen and (max-width: 900px) {
+    /*Acomodo de cuadros*/
+    #cuadro-1{
+      grid-column: 6 span;
+    }
+    #cuadro-2{
+      grid-column: 6 span;
+    }
+  }

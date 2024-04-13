@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('Ticket_id');
             $table->string('Producto');
+            $table->string('Producto_id');
             $table->tinyInteger('Cantidad');
             $table->mediumInteger('Subtotal');
             $table->string('Estado');

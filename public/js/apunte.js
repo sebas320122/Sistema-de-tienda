@@ -22,11 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // Agregar función a boton add
   productosTable.addEventListener('click', function (event) {
       if (event.target.classList.contains('btn-agregar')) {
+          const item_id = parseInt(event.target.getAttribute('data-id'));
           const item = event.target.getAttribute('data-item');
           const precio = parseFloat(event.target.getAttribute('data-precio'));
           const row = document.createElement('tr');
           row.innerHTML = `
               <td><input type="number" min="1" value="1" class="entrada-dato cantidad" name="cantidad[]" required></td>
+              <td><input type="number" value="${item_id}" class="entrada-dato" name="item_id[]" required readonly></td>
               <td><input type="text" value="${item}" class="entrada-dato" name="item[]" required readonly></td>
               <td><input type="number" min="1" value="${precio}" class="entrada-dato" name="precio[]" required readonly></td>
               <td class="subtotal">${precio.toFixed(2)}</td>

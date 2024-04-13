@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var filtroItemsInput = document.getElementById('filtro-items');
+    var filtroItemsInput = document.getElementById('busqueda-items');
     var tablaMenu = document.getElementById('productos-table');
 
     filtroItemsInput.addEventListener('input', function () {

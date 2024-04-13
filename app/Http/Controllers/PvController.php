@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Tickets;
 use App\Models\Tickets_detalle;
-
+use App\Models\Productos;
 
 class PvController extends Controller
 {
@@ -25,6 +25,7 @@ class PvController extends Controller
         // Validar
         $request->validate([
             'cantidad' => 'required|array',
+            'item_id' => 'required|array',
             'item' => 'required|array',
             'precio' => 'required|array',
         ]);
@@ -37,6 +38,7 @@ class PvController extends Controller
 
         // Obtener datos del formulario
         $cantidades = $request->input('cantidad');
+        $items_id = $request->input('item_id');
         $items = $request->input('item');
         $precios = $request->input('precio');
         
@@ -46,11 +48,20 @@ class PvController extends Controller
 
             $ticket->tickets_detalle()->create([
                 'Producto' => $items[$key],
+                'Producto_id' => $items_id[$key],
                 'Cantidad' => $cantidad,
                 'Subtotal' => $precio,
                 'Estado' => "Comprado",
             ]);
             $ticket->total += $precio;
+        
+            // Restar cantidad en exhibicion del producto
+            $producto = Productos::find($items_id[$key]);
+            $producto->En_exhibicion -= $cantidad;
+            $producto->save();
+
+        $ticket->total += $precio;
+        
         }
         $ticket->save();
 

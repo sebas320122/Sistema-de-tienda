@@ -18,111 +18,129 @@ class ProductosSeeder extends Seeder
         DB::table('productos')->insert([
             [
                 "Descripcion"=> 'Papas marca1 250gr',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> 'frituras',
                 "Precio" => 30,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Papas marca1 600gr',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "frituras",
                 "Precio" => 55,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Chocolate marca1',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "dulces",
                 "Precio" => 20,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Chocolate marca2',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "dulces",
                 "Precio" => 25,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Bollitos 100gr',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "pan dulce",
                 "Precio" => 35,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Bollitos 300gr',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "pan dulce",
                 "Precio" => 50,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Donas 100gr',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "pan dulce",
                 "Precio" => 29,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Queso 250gr',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "refrigerados",
                 "Precio" => 60,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Pizza instantanea',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "refrigerados",
                 "Precio" => 56,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Arroz 200gr',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "canasta basica",
                 "Precio" => 30,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Frijoles 200gr',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "canasta basica",
                 "Precio" => 34,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Galletas 78gr',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "galletas",
                 "Precio" => 47,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Galletas 130gr',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "galletas",
                 "Precio" => 47,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Refresco marca1 .5l',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "bebidas",
                 "Precio" => 20,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Refresco marca1 1l',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "bebidas",
                 "Precio" => 20,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Refresco marca2 1l',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "bebidas",
                 "Precio" => 30,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Jugo naranja marca1 .5l',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "bebidas",
                 "Precio" => 20,
-                "Descuento" => 0
             ],
             [
                 "Descripcion"=> 'Jugo naranja marca1 1l',
+                "En_exhibicion"=> 100,
+                "En_almacen"=> 10,
                 "Categoria"=> "bebidas",
                 "Precio" => 30,
-                "Descuento" => 0
             ]
         ]);
         //

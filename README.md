@@ -1,4 +1,6 @@
-## VaroTienda System
+# VaroTienda System | Version 0.2
+
+
 ### Entregables
 | Entregable  | Plazo estipulado | Fecha de entrega | 
 | ------------- | ------------- | ------------- | 
@@ -12,12 +14,6 @@
 | 8.Realizar función “Configuracion” | Abr s4-May s1 | -- |
 | 9.Entregar aplicacion web | May s1-s2 | -- |
 
-#### Entrega 1 (27/02): Diseño de vistas
-- Se diseñaron los diseños de las vistas
-
-#### Entrega 2 (14/03): Realizar el layout
-- Se creo el proyecto laravel
-- Se crearon las vistas en carpeta views
 
 
 

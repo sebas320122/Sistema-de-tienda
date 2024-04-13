@@ -17,7 +17,8 @@ class Productos extends Model
     [
     'Descripcion',
     'Categoria',
-    'Precio',
-    'Descuento'
+    'En_exhibicion',
+    'En_almacen',
+    'Precio'
     ];
 }

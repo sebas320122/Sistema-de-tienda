@@ -1,0 +1,162 @@
+/*Seccion contenido*/
+
+/*grid para recuadros*/
+.cuadricula{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1.2rem;
+    grid-auto-columns: minmax(auto);
+  }
+  
+  /*Base recuadro*/
+  .cuadro .cuadro-header{
+    padding: .5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cuadro .cuadro-header p{
+    /*nota: titulo de recuadro*/
+   text-align: center;
+   font-size: 25px;
+   font-weight: bold;
+  }
+  
+  .cuadro{
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: justify;
+    min-width: 15rem;
+    grid-column: 6 span;/*nota: acomodo de recuadros general*/
+  }
+  .cuadro .cuadro-content{
+    padding: 1.2rem;
+    /*nota: eliminar separación de arriba del contenido del recuadro*/
+    padding-top: 0;
+  }
+  
+  
+  /*opciones para tabla*/
+  .opciones-linea{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1.2rem;
+    grid-auto-columns: minmax(auto);
+    width: 100%;
+    padding-bottom: 10px;/*nota: separacion entre opciones y tabla*/
+    margin: 0 auto;
+  }
+  
+  .opciones-linea .btn-agregar{
+    color: #ffffff;
+    font-size: 16px;
+    border: 1px solid  #303138;
+    background-color: #303138;
+    text-decoration: none;/*nota: quitar subrayado de enlace*/
+    border-radius: 6px;
+    padding: 5px 10px;
+    text-align: center;
+    grid-column: 1 span;
+  }
+  
+  .opciones-linea .busqueda-productos{
+    font-size: 16px;
+    border: 1px solid  #D9D9D9;
+    background-color: #D9D9D9;
+    border-radius: 6px;
+    padding: 7px 2px;
+    text-align: center;
+    grid-column: 1 span;
+  }
+  
+  .cuadro.cuadro-alert .cuadro-content{
+    padding: 10px;
+  }
+  
+    /*Total de tabla*/
+    .cuadro .campo-dato{
+      width:100%;
+      border: 1px solid  #D9D9D9;
+      background-color: #D9D9D9;
+      border-radius: 6px;
+      padding: 7px 2px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+  /*recuadro tabla*/
+  .cuadro table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .cuadro table th, td {
+    padding: 4.8px;
+    text-align: left;
+    /*nota: bordes de tabla*/
+    border-bottom: 2px solid #A6A6A6;
+  }
+  
+  .cuadro table th {
+    /*nota: cabecera de tabla*/
+    background-color: #ffffff;
+    position: sticky;
+    top: 0; 
+    border-bottom: none;
+  }
+  .cuadro table th::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*nota: borde debajo de cabecera de tabla*/
+    background-color: #A6A6A6;
+  }
+  
+  
+  .cuadro .campo-tabla{
+    overflow-y:scroll;
+    padding: 1.4rem 0;
+    padding-top: 0;
+    height: 62vh;/*nota: altura de campo para tabla*/
+    margin: 0 auto;
+  }
+  
+  .cuadro .texto-mesa{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  /*boton para editar registro*/
+  table .btn-editar{
+    font-weight: bold;
+    padding: 5px 15px;
+    color: #ffffff;
+    background-color: #6DA4AA;
+    border: 1px solid #6DA4AA;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+    
+  /*recuadro de alerta*/
+  .mensaje-alerta{
+    background-color: #A6A6A6;
+    color: #ffffff;
+    border-radius:6px;
+    padding: 8px;
+    grid-column: 6 span;
+  }
+  
+  /*Vista en dispositivos moviles*/
+  @media only screen and (max-width: 900px) {
+    /*opciones para tabla*/
+    .opciones-linea .btn-agregar{
+      grid-column: 6 span;
+    }
+    .opciones-linea .busqueda-productos{
+      grid-column: 6 span;
+    }
+  }

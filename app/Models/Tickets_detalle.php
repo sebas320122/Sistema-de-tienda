@@ -17,6 +17,7 @@ class Tickets_detalle extends Model
     [
     'Ticket_id',
     'Producto',
+    'Producto_id',
     'Cantidad',
     'Subtotal',
     'Estado'

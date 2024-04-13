@@ -72,7 +72,7 @@
   }
   
   
-  .filtro-items{
+  .busqueda-items{
     width:100%;
     font-size: .9rem;
     color: #FFFFFF;
@@ -166,8 +166,9 @@
     .cuadro #ticket-table th:nth-child(1),
     .cuadro #ticket-table td:nth-child(1) {
       /*nota: columna 1*/
-      width: 20%;
+      width: 10%;
     }
+
     .cuadro #ticket-table th:nth-child(3),
     .cuadro #ticket-table td:nth-child(3) {
       /*nota: columna 3*/

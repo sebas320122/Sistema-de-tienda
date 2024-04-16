@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Detectar elementos html
-  const productosTable = document.getElementById('productos-table');
+  const productosTable = document.getElementById('busqueda-table');
   const ticketTable = document.getElementById('ticket-table');
   const ticketForm = document.getElementById('ticket-form');
   const totalText = document.querySelector('.texto-total');

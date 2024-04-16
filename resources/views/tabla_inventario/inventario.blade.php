@@ -1,37 +1,63 @@
-@extends('base.menu')
+@extends('general.base')
 @section('title', 'Disponibilidad')
 
 @section('content')
     <div class="cuadricula">
-        <!--Recuadro con tabla-->
+        <!--Notificacion-->
+        @if ($message = Session::get('success'))
+            <div class="notificacion exito">
+                <div class="alineacion">
+                    <p>{{$message}}</p>
+                    <button class="btn-close">X</button>
+                </div>
+            </div>
+        @endif
+        @if ($message = Session::get('error'))
+            <div class="notificacion">
+                <div class="alineacion">
+                    <p>{{$message}}</p>
+                    <button class="btn-close">X</button>
+                </div>
+            </div>
+        @endif
+        <!---Cuadro con botones-->
         <div class="cuadro">
             <div class="cuadro-header">
-                <p>Disponibilidad de productos</p>
+                <p>Inventario</p>
             </div>
             <div class="cuadro-content">
                 <!--Linea de botones-->
                 <div class="opciones-linea">
-                    <a href="{{url('disponibilidad/agregar')}}" class="btn-agregar">Agregar</a>
-                    <input type="text" class="busqueda-productos" placeholder="Buscar" id="filtro">
+                    <a href="{{url('inventario/agregar')}}" class="btn-agregar">Agregar</a>
+                    <input type="text" class="busqueda-productos" placeholder="Buscar" id="busqueda">
                 </div>
+            </div>
+        </div>
+        <!--Cuadro con tabla-->
+        <div class="cuadro">
+            <div class="cuadro-header">
+            </div>
+            <div class="cuadro-content">
                 <div class="campo-tabla">
-                    <table id="filtro-table">
+                    <table id="busqueda-table">
                         <thead>
                         <tr>
                             <th>Producto</th>
-                            <th>Existencia</th>
-                            <th>Capacidad</th>
-                            <th>Porcentaje</th>
+                            <th>Categoria</th>
+                            <th>En exhibicion</th>
+                            <th>En almacen</th>
+                            <th>Precio</th>
                             <th>Accion</th>
                         </tr>
                         </thead>
                         <tbody>
                             @foreach ($productos as $producto)
                                 <tr>
-                                    <td>{{$producto->Producto}}</td>
-                                    <td>{{$producto->Existencia}}</td>
-                                    <td>{{$producto->Capacidad}}</td>
-                                    <td>%{{$producto->Porcentaje}}</td>
+                                    <td>{{$producto->Descripcion}}</td>
+                                    <td>{{$producto->Categoria}}</td>
+                                    <td>{{$producto->En_exhibicion}}</td>
+                                    <td>{{$producto->En_almacen}}</td>
+                                    <td>{{$producto->Precio}}</td>
                                     <td>
                                         <a href="{{route('show.info_producto',$producto->id)}}">
                                             <button class="btn-editar">
@@ -46,17 +72,6 @@
                 </div>
             </div>
         </div>
-        <!--Mensaje de alerta-->
-                @if ($message = Session::get('success'))
-                    <div class="mensaje-alerta">
-                        <p>{{$message}}</p>
-                    </div>
-                @endif
-                @if ($message = Session::get('error'))
-                    <div class="mensaje-alerta">
-                        <p>{{$message}}</p>
-                    </div>
-                @endif
     </div>
     
     <!--Agregar estilo-->
@@ -66,6 +81,7 @@
     <!--Agregar script-->
     @push('scripts')
         <script src="/js/busqueda.js"></script>
+        <script src="/js/notificacion.js"></script>
     @endpush
 
 @endsection

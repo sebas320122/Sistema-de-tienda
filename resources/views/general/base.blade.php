@@ -7,7 +7,8 @@
     <title>@yield('title')</title><!--seccion de titulo-->
     <link rel="stylesheet" href="/css/general/base.css">
     @stack('styles')<!--agrupacion de estilos-->
-    <link rel="icon" type="image/x-icon" href="varotienda.ico">
+    <!--Logo de pagina-->
+    <link rel="icon" type="image/x-icon" href="{{asset('varotienda.ico')}}">
     <!-- Iconos -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Fonts -->
@@ -22,42 +23,42 @@
   <div class="barra">
     <div class="barra-logo">
         <div class="marco-logo">
-            <img src="varotienda.png" alt="cat" class="logo">
+            <img src="{{asset('varotienda.png')}}" alt="cat" class="logo">
         </div>
         <div class="logo-titulo">VaroTienda</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="barra-opciones">
       <li>
-        <a href="#">
+        <a href="{{url('pv')}}">
           <i class='bx bxs-calculator'></i>
           <span class="opcion_texto">Punto de venta</span>
         </a>
          <span class="tooltip">Punto de venta</span>
       </li>
       <li>
-        <a href="#">
+        <a href="{{url('inventario')}}">
           <i class='bx bxs-box'></i>
           <span class="opcion_texto">Inventario</span>
         </a>
          <span class="tooltip">Inventario</span>
       </li>
       <li>
-        <a href="#">
+        <a href="{{url('reabastecimientos')}}">
           <i class='bx bxs-notepad'></i>
           <span class="opcion_texto">Reabastecimientos</span>
         </a>
          <span class="tooltip">Reabastecimientos</span>
       </li>
       <li>
-        <a href="#">
+        <a href="{{url('resumen')}}">
           <i class='bx bxs-dollar-circle'></i>
           <span class="opcion_texto">Resumen</span>
         </a>
          <span class="tooltip">Resumen</span>
       </li>
       <li>
-        <a href="#">
+        <a href="{{url('usuarios')}}">
           <i class='bx bxs-cog'></i>
           <span class="opcion_texto">Usuarios</span>
         </a>

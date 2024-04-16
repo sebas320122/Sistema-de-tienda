@@ -19,6 +19,7 @@ class Productos extends Model
     'Categoria',
     'En_exhibicion',
     'En_almacen',
-    'Precio'
+    'Precio',
+    'Ultima_actualizacion'
     ];
 }

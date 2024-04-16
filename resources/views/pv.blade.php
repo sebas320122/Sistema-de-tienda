@@ -25,9 +25,9 @@
         <!--Cuadro productos-->
         <div class="cuadro" id="cuadro-1">
             <div class="cuadro-content">
-                <input type="text" class="busqueda-items" placeholder="Buscar producto" id="busqueda-items">
+                <input type="text" class="busqueda" placeholder="Buscar producto" id="busqueda">
                 <div class="campo-tabla tabla_productos">
-                    <table id="productos-table">
+                    <table id="busqueda-table">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -39,7 +39,7 @@
                         <tbody>
                             @foreach ($productos as $producto)
                                 <tr>
-                                    <td>{{$producto->id}}</td>
+                                    <td>>{{$producto->id}}</td>
                                     <td>{{$producto->Descripcion}}</td>
                                     <td>{{$producto->Precio}}</td>
                                     <td><button class="btn-agregar" data-id="{{$producto->id}}" data-item="{{$producto->Descripcion}}" data-precio="{{$producto->Precio}}">+</button></td>

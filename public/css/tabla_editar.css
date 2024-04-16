@@ -1,55 +1,56 @@
 /*Seccion contenido*/
 
-/*grid para recuadros*/
+/*cuadricula para recuadros*/
 .cuadricula{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 1.2rem;
     grid-auto-columns: minmax(auto);
   }
-/*--> Seccion notificacion*/
-  .notificacion{
-    grid-column: 6 span;
-    background-color: #D04848;
-    color: #ffffff;
-    border-radius:6px;
-    padding: 8px;    
-  }
 
-  .notificacion.exito{
-    background-color: #0DA574;
-  }
+ /*--> Seccion notificacion*/
+    .notificacion{
+        grid-column: 6 span;
+        background-color: #D04848;
+        color: #ffffff;
+        border-radius:6px;
+        padding: 8px;    
+    }
 
-  .alineacion{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    position: relative;
-  }
+    .notificacion.exito{
+        background-color: #0DA574;
+    }
+    
+    .alineacion{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        position: relative;
+    }
 
-  .alineacion .btn-close{
-    position: absolute;
-    right: 0;
-    padding:2px;
-    color: #FFFFFF;
-    font-weight: bold;
-  }
+    .alineacion .btn-close{
+        position: absolute;
+        right: 0;
+        padding:2px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
 
-  .notificacion .btn-close{
-    background-color: #D04848;
-    border:none;
-  } 
+    .notificacion .btn-close{
+        background-color: #D04848;
+        border:none;
+    } 
 
-  .notificacion.exito .btn-close{
-    background-color: #0DA574;
-    border:none;
-  }
-  .notificacion.close{
-    display: none;
-  }       
+    .notificacion.exito .btn-close{
+        background-color: #0DA574;
+        border:none;
+    }
+    .notificacion.close{
+        display: none;
+    }       
  /*<-- Seccion notificacion*/
-
-  /*Base cuadro*/
+  
+  /*Base recuadro*/
   .cuadro .cuadro-header{
     padding: .5rem;
     justify-content: center;
@@ -65,8 +66,8 @@
   }
   
   .cuadro{
-    background-color: #3C3C3C; /*color de cuadro*/
-    border-radius: 14px;
+    background-color: #3C3C3C;
+    border-radius: 10px;
     text-align: justify;
     min-width: 15rem;
     grid-column: 6 span;/*nota: acomodo de recuadros general*/
@@ -89,44 +90,28 @@
     margin: 0 auto;
   }
   
-  .opciones-linea .btn-agregar{
+  
+  .opciones-linea .btn{
     color: #ffffff;
     font-size: 16px;
-    border: 1px solid  #0DA574;
-    background-color: #0DA574; /*color del boton*/
-    text-decoration: none;/* quitar subrayado de enlace*/
+    text-decoration: none;/*nota: quitar subrayado de enlace*/
     border-radius: 6px;
     padding: 5px 10px;
     text-align: center;
     grid-column: 1 span;
   }
+
   
-  .opciones-linea .busqueda-productos{
-    color: #FFFFFF;
+  .opciones-linea .btn.btn-regresar{
     font-size: 16px;
-    border: 1px solid  #282929;
-    background-color: #282929;
-    border-radius: 6px;
-    padding: 7px 2px;
-    text-align: center;
-    grid-column: 2 span;
+    border: 1px solid  #737373;
+    background-color: #737373;
   }
   
   .cuadro.cuadro-alert .cuadro-content{
     padding: 10px;
   }
   
-    /*Total de tabla*/
-    .cuadro .campo-dato{
-      width:100%;
-      border: 1px solid  #D9D9D9;
-      background-color: #D9D9D9;
-      border-radius: 6px;
-      padding: 7px 2px;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
   /*recuadro tabla*/
   .cuadro table {
     border-collapse: collapse;
@@ -141,8 +126,8 @@
   }
   
   .cuadro table th {
-    /*cabecera de tabla*/
-    background-color: #3C3C3C;
+    /*nota: cabecera de tabla*/
+    background-color: #ffffff;
     position: sticky;
     top: 0; 
     border-bottom: none;
@@ -159,47 +144,76 @@
   }
   
   
-  .cuadro .campo-tabla{
+  /*formulario*/
+  .cuadro .campo-formulario{
     overflow-y:scroll;
     padding: 1.4rem 0;
     padding-top: 0;
-    height: 62vh;/*nota: altura de campo para tabla*/
+    height: 62vh;/*nota: altura de campo para formulario*/
     margin: 0 auto;
   }
   
-  .cuadro .texto-mesa{
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 20px;
+  .campo-formulario .titulo-dato.primero{
+    display: block;
+    padding-top: 0;
+  }
+  .campo-formulario .titulo-dato{
+    /*nota: espacio entre campos de datos*/
+    display: block;
+    padding-top: 15px;
   }
   
-  /*boton para editar registro*/
-  table .btn-editar{
-    font-weight: bold;
-    padding: 5px 15px;
-    color: #ffffff;
-    background-color: #6DA4AA;
-    border: 1px solid #6DA4AA;
+  .campo-formulario .campo-dato{
+    width:100%;
+    border: 1px solid  #282929;
+    background-color: #282929;
     border-radius: 6px;
-    cursor: pointer;
+    padding: 7px 2px;
+    font-size: 16px;
   }
-    
+  
+  .opciones-linea.inferior{
+    padding-top: 10px;/*nota: separacion entre opciones y tabla*/
+    padding-bottom: 0;
+  }
+  
+  .opciones-linea .btn.btn-eliminar{
+    border: 1px solid  #D04848;
+    background-color: #D04848;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .opciones-linea .btn.btn-editar{
+    border: 1px solid  #6DA4AA;
+    background-color: #6DA4AA;
+  }
+  
   /*recuadro de alerta*/
   .mensaje-alerta{
     background-color: #A6A6A6;
     color: #ffffff;
     border-radius:6px;
     padding: 8px;
+    /*nota: ocultar alerta*/
     grid-column: 6 span;
   }
   
   /*Vista en dispositivos moviles*/
   @media only screen and (max-width: 900px) {
     /*opciones para tabla*/
-    .opciones-linea .btn-agregar{
+    .opciones-linea .btn-regresar{
       grid-column: 6 span;
     }
-    .opciones-linea .busqueda-productos{
+    .opciones-linea .btn-editar{
       grid-column: 6 span;
     }
+    .opciones-linea .btn-eliminar{
+      grid-column: 6 span;
+    }
+
+    .opciones-linea form{
+        grid-column: 6 span;
+    }
+
   }

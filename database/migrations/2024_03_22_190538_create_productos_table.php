@@ -18,6 +18,7 @@ return new class extends Migration
             $table->smallInteger('En_almacen');
             $table->string('Categoria');
             $table->smallInteger('Precio');
+            $table->dateTime('Ultima_edicion')->nullable();
             $table->timestamps();
         });
     }

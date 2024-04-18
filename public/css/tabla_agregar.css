@@ -209,10 +209,7 @@
   /*Vista en dispositivos moviles*/
   @media only screen and (max-width: 900px) {
     /*opciones para tabla*/
-    .opciones-linea .btn-regresar{
-      grid-column: 6 span;
-    }
-    .opciones-linea .btn-agregar{
+    .opciones-linea .btn{
       grid-column: 6 span;
     }
     

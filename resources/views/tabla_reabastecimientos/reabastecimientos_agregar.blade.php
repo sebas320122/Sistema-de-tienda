@@ -1,5 +1,5 @@
 @extends('general.base')
-@section('title', 'Editar producto')
+@section('title', 'Agregar orden')
 
 @section('content')
     <div class="cuadricula">
@@ -21,19 +21,18 @@
             </div>
         @endif
         <!--Formulario-->
-        <form action="{{route('update.producto',$producto->id)}}" method="POST">
+        <form action="{{route('store.orden')}}" method="POST">
             @csrf
-            @method('PUT')
             <!--Cuadro con botones-->
             <div class="cuadro">
                 <div class="cuadro-header">
-                    <p>Editar producto</p>
+                    <p>Agregar orden de reabastecimiento</p>
                 </div>
                 <div class="cuadro-content">
                     <!--Linea de botones-->
                     <div class="opciones-linea">
-                        <a href="{{route('show.info_producto',$producto->id)}}" class="btn btn-regresar">Regresar</a>
-                        <input type="submit" value="Editar" class="btn btn-editar">
+                        <a href="{{url('reabastecimientos')}}" class="btn btn-regresar">Regresar</a>
+                        <input type="submit" value="Agregar" class="btn btn-agregar">
                     </div>
                 </div>
             </div>
@@ -43,16 +42,21 @@
                 </div>
                 <div class="cuadro-content">
                     <div class="campo-formulario">
-                        <label class="titulo-dato primero">Descripcion:</label>
-                        <input class="campo-dato" required type="text" value="{{$producto->Descripcion}}" name="descripcion">
-                        <label class="titulo-dato">En exhibicion:</label>
-                        <input class="campo-dato" required type="number" value="{{$producto->En_exhibicion}}" name="en_exhibicion">
-                        <label class="titulo-dato">En almacen:</label>
-                        <input class="campo-dato" required type="number" value="{{$producto->En_almacen}}" name="en_almacen">
-                        <label class="titulo-dato">Categoria:</label>
-                        <input class="campo-dato" required type="text" value="{{$producto->Categoria}}" name="categoria">
-                        <label class="titulo-dato">Precio:</label>
-                        <input class="campo-dato" required type="number" value="{{$producto->Precio}}" name="precio">
+                        <label class="titulo-dato primero">Proveedor:</label>
+                        <input class="campo-dato" required type="text" name="proveedor">
+                        <label class="titulo-dato">ID de producto:</label>
+                        <input class="campo-dato" required type="number" min="0" name="producto_id">
+                        <label class="titulo-dato">Cantidad:</label>
+                        <input class="campo-dato" required type="number" min="0" name="cantidad">
+                        <label class="titulo-dato">Costo:</label>
+                        <input class="campo-dato" required type="number" min="0" name="costo">
+                        <label class="titulo-dato">Estado:</label>
+                        <select class="campo-dato" name="estado">
+                            <option value="Anotada">Anotada</option>
+                            <option value="En curso">En curso</option>
+                        </select>
+                        <label class="titulo-dato">Fecha estimada:</label>
+                        <input class="campo-dato" required type="date" name="fecha_estimada">
                     </div>
                 </div>
             </div>

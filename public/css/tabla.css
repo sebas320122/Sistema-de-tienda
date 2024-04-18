@@ -100,6 +100,18 @@
     text-align: center;
     grid-column: 1 span;
   }
+
+  .opciones-linea .btn-vista{
+    color: #ffffff;
+    font-size: 16px;
+    border: 1px solid  #0097B2;
+    background-color: #0097B2; /*color del boton*/
+    text-decoration: none;/* quitar subrayado de enlace*/
+    border-radius: 6px;
+    padding: 5px 10px;
+    text-align: center;
+    grid-column: 1 span;
+  }
   
   .opciones-linea .busqueda-productos{
     color: #FFFFFF;
@@ -178,8 +190,8 @@
     font-weight: bold;
     padding: 5px 15px;
     color: #ffffff;
-    background-color: #6DA4AA;
-    border: 1px solid #6DA4AA;
+    background-color: #0097B2;
+    border: 1px solid #0097B2;
     border-radius: 6px;
     cursor: pointer;
   }
@@ -200,6 +212,9 @@
       grid-column: 6 span;
     }
     .opciones-linea .busqueda-productos{
+      grid-column: 6 span;
+    }
+    .opciones-linea .btn-vista{
       grid-column: 6 span;
     }
   }

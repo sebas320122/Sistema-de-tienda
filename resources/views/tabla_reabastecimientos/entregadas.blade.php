@@ -23,14 +23,14 @@
         <!---Cuadro con botones-->
         <div class="cuadro">
             <div class="cuadro-header">
-                <p>Ordenes de reabastecimiento entregadas</p>
+                <p>Ordenes de reabastecimiento</p>
             </div>
             <div class="cuadro-content">
                 <!--Linea de botones-->
                 <div class="opciones-linea">
-                    <a href="{{url('reabastecimientos/agregar')}}" class="btn-agregar">Agregar</a>
+                    <a href="{{url('reabastecimientos/agregar')}}" class="btn btn-agregar">Agregar</a>
                     <input type="text" class="busqueda-productos" placeholder="Buscar" id="busqueda">
-                    <a href="{{url('reabastecimientos')}}" class="btn-vista">Enlistadas</a>
+                    <a href="{{url('reabastecimientos')}}" class="btn btn-vista">Enlistadas</a>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                                     <td>{{$orden->Fecha_entrega}}</td>
                                     <td>
                                         <a href="{{route('show.info_orden',$orden->id)}}">
-                                            <button class="btn-editar">
+                                            <button class="btn-ver">
                                                 Ver
                                             </button>
                                         </a>

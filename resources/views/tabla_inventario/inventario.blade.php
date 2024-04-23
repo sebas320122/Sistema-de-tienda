@@ -28,7 +28,7 @@
             <div class="cuadro-content">
                 <!--Linea de botones-->
                 <div class="opciones-linea">
-                    <a href="{{url('inventario/agregar')}}" class="btn-agregar">Agregar</a>
+                    <a href="{{url('inventario/agregar')}}" class="btn btn-agregar">Agregar</a>
                     <input type="text" class="busqueda-productos" placeholder="Buscar" id="busqueda">
                 </div>
             </div>
@@ -60,7 +60,7 @@
                                     <td>{{$producto->Precio}}</td>
                                     <td>
                                         <a href="{{route('show.info_producto',$producto->id)}}">
-                                            <button class="btn-editar">
+                                            <button class="btn-ver">
                                                 Ver
                                             </button>
                                         </a>

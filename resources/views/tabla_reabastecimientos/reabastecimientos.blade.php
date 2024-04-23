@@ -28,9 +28,9 @@
             <div class="cuadro-content">
                 <!--Linea de botones-->
                 <div class="opciones-linea">
-                    <a href="{{url('reabastecimientos/agregar')}}" class="btn-agregar">Agregar</a>
+                    <a href="{{url('reabastecimientos/agregar')}}" class="btn btn-agregar">Agregar</a>
                     <input type="text" class="busqueda-productos" placeholder="Buscar" id="busqueda">
-                    <a href="{{url('reabastecimientos/entregadas')}}" class="btn-vista">Entregadas</a>
+                    <a href="{{url('reabastecimientos/entregadas')}}" class="btn btn-vista">Entregadas</a>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                                     <td>{{$orden->Fecha_estimada}}</td>
                                     <td>
                                         <a href="{{route('show.info_orden',$orden->id)}}">
-                                            <button class="btn-editar">
+                                            <button class="btn-ver">
                                                 Ver
                                             </button>
                                         </a>

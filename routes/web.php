@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PvController;
 use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\ReabastecimientosController;
+use App\Http\Controllers\ResumenController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -43,5 +44,12 @@ Route::controller(ReabastecimientosController::class)->group(function () {
 
     Route::get('reabastecimientos/editar/{id}', 'showEditarOrden')->name('show.editar_orden');
     Route::put('reabastecimientos/editar/{id}', 'updateOrden')->name('update.orden');
+        
+});
+
+//Rutas para opcion Resumen
+Route::controller(ResumenController::class)->group(function () {
+    Route::get('resumen', 'showResumen')->name('show.resumen');
+    Route::get('resumen/semana', 'showResumenSemana')->name('show.resumen_semana');
         
 });

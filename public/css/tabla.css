@@ -61,7 +61,7 @@
     text-align: left;
     font-size: 25px;
     font-weight: bold;
-    padding-left: 20px;
+    padding-left: 10px;
   }
   
   .cuadro{
@@ -71,12 +71,17 @@
     min-width: 15rem;
     grid-column: 6 span;/*nota: acomodo de recuadros general*/
   }
+
+  .cuadro .texto-total{
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+
   .cuadro .cuadro-content{
     padding: 1.2rem;
     /*nota: eliminar separación de arriba del contenido del recuadro*/
     padding-top: 0;
   }
-  
   
   /*opciones para tabla*/
   .opciones-linea{
@@ -88,42 +93,45 @@
     padding-bottom: 10px;/*nota: separacion entre opciones y tabla*/
     margin: 0 auto;
   }
-  
-  .opciones-linea .btn-agregar{
-    color: #ffffff;
-    font-size: 16px;
-    border: 1px solid  #0DA574;
-    background-color: #0DA574; /*color del boton*/
-    text-decoration: none;/* quitar subrayado de enlace*/
-    border-radius: 6px;
-    padding: 5px 10px;
-    text-align: center;
-    grid-column: 1 span;
-  }
 
-  .opciones-linea .btn-vista{
-    color: #ffffff;
-    font-size: 16px;
-    border: 1px solid  #0097B2;
-    background-color: #0097B2; /*color del boton*/
-    text-decoration: none;/* quitar subrayado de enlace*/
-    border-radius: 6px;
-    padding: 5px 10px;
-    text-align: center;
-    grid-column: 1 span;
-  }
-  
-  .opciones-linea .busqueda-productos{
-    color: #FFFFFF;
-    font-size: 16px;
-    border: 1px solid  #282929;
-    background-color: #282929;
-    border-radius: 6px;
-    padding: 7px 2px;
-    text-align: center;
-    grid-column: 2 span;
-  }
-  
+  /*--> Elemento botones*/
+    .opciones-linea .btn{
+      color: #ffffff;
+      font-size: 16px;
+      text-decoration: none;/* quitar subrayado de enlace*/
+      border-radius: 6px;
+      padding: 5px 10px;
+      text-align: center;
+      grid-column: 1 span;
+    }
+
+    .opciones-linea .btn.btn-agregar{
+      border: 1px solid  #0DA574;
+      background-color: #0DA574; /*color del boton*/
+    }
+
+    .opciones-linea .btn.btn-vista{
+      border: 1px solid  #0097B2;
+      background-color: #0097B2; /*color del boton*/
+    }
+
+    .opciones-linea .btn.btn-regresar{
+      border: 1px solid  #737373;
+      background-color: #737373; /*color del boton*/
+    }
+    
+    .opciones-linea .busqueda-productos{
+      color: #FFFFFF;
+      font-size: 16px;
+      border: 1px solid  #282929;
+      background-color: #282929;
+      border-radius: 6px;
+      padding: 7px 2px;
+      text-align: center;
+      grid-column: 2 span;
+    }
+  /*<-- Elemento botones*/
+
   .cuadro.cuadro-alert .cuadro-content{
     padding: 10px;
   }
@@ -186,7 +194,7 @@
   }
   
   /*boton para editar registro*/
-  table .btn-editar{
+  table .btn-ver{
     font-weight: bold;
     padding: 5px 15px;
     color: #ffffff;
@@ -196,25 +204,14 @@
     cursor: pointer;
   }
     
-  /*recuadro de alerta*/
-  .mensaje-alerta{
-    background-color: #A6A6A6;
-    color: #ffffff;
-    border-radius:6px;
-    padding: 8px;
-    grid-column: 6 span;
-  }
-  
+
   /*Vista en dispositivos moviles*/
   @media only screen and (max-width: 900px) {
     /*opciones para tabla*/
-    .opciones-linea .btn-agregar{
+    .opciones-linea .btn{
       grid-column: 6 span;
     }
     .opciones-linea .busqueda-productos{
-      grid-column: 6 span;
-    }
-    .opciones-linea .btn-vista{
       grid-column: 6 span;
     }
   }

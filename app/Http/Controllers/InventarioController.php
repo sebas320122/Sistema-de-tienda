@@ -87,7 +87,7 @@ class InventarioController extends Controller
             // Realizar actualizacion
             $producto->save();
 
-            return redirect()->back()->with('success', 'Seha modificado el producto');
+            return redirect()->back()->with('success', 'Se ha modificado el producto');
 
         } catch(\Exception $e){
             return redirect()->back()->with('error', 'Hubo un error');

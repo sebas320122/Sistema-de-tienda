@@ -59,7 +59,7 @@
       </li>
       <li>
         <a href="{{url('usuarios')}}">
-          <i class='bx bxs-cog'></i>
+          <i class='bx bxs-group'></i>
           <span class="opcion_texto">Usuarios</span>
         </a>
          <span class="tooltip">Usuarios</span>
@@ -67,10 +67,10 @@
       <li>
       <li>
         <a href="#">
-          <i class='bx bxs-user-circle'></i>
-          <span class="opcion_texto">Mi cuenta</span>
+          <i class='bx bxs-log-out'></i>
+          <span class="opcion_texto">Salir</span>
         </a>
-         <span class="tooltip">Nombre: Sebastian Garcia Lizarraga</span>
+         <span class="tooltip">Salir: Sebastian Garcia Lizarraga</span>
       </li>
 
     </ul>

@@ -5,6 +5,7 @@ use App\Http\Controllers\PvController;
 use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\ReabastecimientosController;
 use App\Http\Controllers\ResumenController;
+use App\Http\Controllers\UsuariosController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -51,5 +52,20 @@ Route::controller(ReabastecimientosController::class)->group(function () {
 Route::controller(ResumenController::class)->group(function () {
     Route::get('resumen', 'showResumen')->name('show.resumen');
     Route::get('resumen/semana', 'showResumenSemana')->name('show.resumen_semana');
+    
+});
+
+//Rutas para opcion Usuarios
+Route::controller(UsuariosController::class)->group(function () {
+    Route::get('usuarios', 'showUsuarios')->name('show.usuarios');
+
+    Route::get('usuarios/info/{id}', 'showInfoUsuario')->name('show.info_usuario');
+    Route::delete('usuarios/info/{id}', 'deleteUsuario')->name('delete.usuario');
+
+    Route::get('usuarios/agregar', 'showAgregarUsuario')->name('show.agregar_usuario');
+    Route::post('usuarios/agregar', 'storeUsuario')->name('store.usuario');
+
+    Route::get('usuarios/editar/{id}', 'showEditarUsuario')->name('show.editar_usuario');
+    Route::put('usuarios/editar/{id}', 'updateUsuario')->name('update.usuario');
         
 });

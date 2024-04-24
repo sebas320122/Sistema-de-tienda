@@ -7,14 +7,13 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
+
     public function run(): void
     {
         // Ejecutar seeders
         $this->call([
-            ProductosSeeder::class
+            ProductosSeeder::class,
+            UsuarioSeeder::class
         ]);
     }
 }

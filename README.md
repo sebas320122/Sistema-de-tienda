@@ -1,4 +1,4 @@
-# VaroTienda System | Version 0.5
+# VaroTienda System | Version 0.6
 
 
 ### Entregables
@@ -10,7 +10,7 @@
 | 4.Realizar función “Inventario” | Mar s3-Abr s1 | 31/03/2024 |
 | 5.Realizar función “Reabastecimientos” | Abr s1-s2 | 02/04/2024 |
 | 6.Realizar función “Ganancias” | Abr s2-s3 | 04/04/2024 |
-| 7.Realizar función “Usuarios” | Abr s3-s4 | -- |
+| 7.Realizar función “Usuarios” | Abr s3-s4 | 05/04/2024 |
 | 8.Realizar funcion de logeo | Abr s4-May s1 | -- |
 | 9.Entregar aplicacion web | May s1-s2 | -- |
 

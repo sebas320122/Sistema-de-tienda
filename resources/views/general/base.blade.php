@@ -66,11 +66,11 @@
       </li>
       <li>
       <li>
-        <a href="#">
+        <a href="{{url('salir')}}">
           <i class='bx bxs-log-out'></i>
           <span class="opcion_texto">Salir</span>
         </a>
-         <span class="tooltip">Salir: Sebastian Garcia Lizarraga</span>
+         <span class="tooltip">Salir: {{Auth::user()->nombre}}</span>
       </li>
 
     </ul>

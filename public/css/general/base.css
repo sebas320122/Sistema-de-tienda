@@ -10,7 +10,7 @@
       color:#FFFFFF; /*color de texto*/
   }
   
-  /*Seccion barra*/
+  /* -->Seccion barra*/
   .barra{
     position: fixed;
     left: 0;
@@ -168,6 +168,7 @@
     border-radius: 6px;
     margin-right: 10px;
   }
+  /*<-- Seccion barra*/
   
   .contenido{
     position: relative;

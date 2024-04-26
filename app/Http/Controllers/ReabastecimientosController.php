@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Reabastecimientos;
 use App\Models\Productos;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class ReabastecimientosController extends Controller
 {
@@ -42,6 +44,10 @@ class ReabastecimientosController extends Controller
 
     // Guardar orden en BD
     public function storeOrden(Request $request){
+        // Comprobar atorizacion
+        if (! Gate::allows('tablaReabastecimientos',Auth::user())) {
+            return redirect()->back()->with('error','No tienes permitido agregar ordenes');
+        }
 
         try{
 
@@ -92,6 +98,11 @@ class ReabastecimientosController extends Controller
 
     // Actualizar orden en BD
     public function updateOrden(Request $request, $id){
+        // Comprobar atorizacion
+        if (! Gate::allows('tablaReabastecimientos',Auth::user())) {
+            return redirect()->back()->with('error','No tienes permitido editar ordenes');
+        }
+
         try{
             // Buscar orden en BD
             $orden = Reabastecimientos::find($id);
@@ -172,7 +183,11 @@ class ReabastecimientosController extends Controller
     }
     
     // Eliminar orden de BD
-    public function deleteOrden($id){ 
+    public function deleteOrden($id){
+        // Comprobar atorizacion
+        if (! Gate::allows('tablaReabastecimientos',Auth::user())) {
+            return redirect()->back()->with('error','No tienes permitido eliminar ordenes');
+        } 
 
         try{
             // Buscar orden en BD

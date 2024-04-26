@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Productos;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class InventarioController extends Controller
 {
@@ -25,6 +27,10 @@ class InventarioController extends Controller
 
     // Guardar producto en BD
     public function storeProducto(Request $request){
+        // Comprobar autorizacion
+        if (! Gate::allows('tablaInventario',Auth::user())) {
+            return redirect()->back()->with('error','No tienes permitido agregar productos');
+        }
 
         try{
             // Obtener los datos del formulario
@@ -64,6 +70,10 @@ class InventarioController extends Controller
 
     // Actualizar producto en BD
     public function updateProducto(Request $request, $id){
+        // Comprobar autorizacion
+        if (! Gate::allows('tablaInventario',Auth::user())) {
+            return redirect()->back()->with('error','No tienes permitido editar productos');
+        }
 
         try{
             // Buscar producto en BD
@@ -107,7 +117,11 @@ class InventarioController extends Controller
     }
     
     // Eliminar producto de BD
-    public function deleteProducto($id){ 
+    public function deleteProducto($id){
+        // Comprobar autorizacion
+        if (! Gate::allows('tablaInventario',Auth::user())) {
+            return redirect()->back()->with('error','No tienes permitido eliminar productos');
+        } 
 
         try{
             // Buscar producto en BD

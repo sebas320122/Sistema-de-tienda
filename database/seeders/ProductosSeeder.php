@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\DB;
 class ProductosSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Productos de muestra/pre-definidos
      */
     public function run(): void
     {
-        //Productos de muestra, comentar al momento de entregar la aplicacion
+        /*
         DB::table('productos')->truncate();
         $fechaActual = now();
         DB::table('productos')->insert([
@@ -162,6 +162,6 @@ class ProductosSeeder extends Seeder
                 "created_at" => $fechaActual,
             ]
         ]);
-        //
+        */
     }
 }

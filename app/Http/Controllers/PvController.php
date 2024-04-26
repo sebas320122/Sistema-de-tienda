@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Tickets;
 use App\Models\Tickets_detalle;
 use App\Models\Productos;
+use Illuminate\Support\Facades\Auth;
 
 class PvController extends Controller
 {
@@ -33,7 +34,7 @@ class PvController extends Controller
         //Generar ticket
         $ticket = Tickets::create([
         'Total' => 0, 
-        'Empleado' => "Empleado1",
+        'Empleado' => Auth::user()->nombre,
         ]);
 
         // Obtener datos del formulario

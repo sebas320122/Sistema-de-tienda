@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class UsuariosController extends Controller
 {
@@ -25,6 +27,10 @@ class UsuariosController extends Controller
 
     // Guardar Usuario en BD
     public function storeUsuario(Request $request){
+        // Comprobar autorizacion
+        if (! Gate::allows('tablaUsuarios',Auth::user())) {
+            return redirect()->back()->with('error','No tienes permitido agregar usuarios');
+        }
 
         try{
             // Obtener los datos del formulario
@@ -62,6 +68,10 @@ class UsuariosController extends Controller
 
     // Actualizar Usuario en BD
     public function updateUsuario(Request $request, $id){
+        // Comprobar autorizacion
+        if (! Gate::allows('tablaUsuarios',Auth::user())) {
+            return redirect()->back()->with('error','No tienes permitido editar usuarios');
+        }
 
         try{
             // Buscar Usuario en BD
@@ -102,7 +112,11 @@ class UsuariosController extends Controller
     }
     
     // Eliminar Usuario de BD
-    public function deleteUsuario($id){ 
+    public function deleteUsuario($id){
+        // Comprobar autorizacion
+        if (! Gate::allows('tablaUsuarios',Auth::user())) {
+            return redirect()->back()->with('error','No tienes permitido eliminar usuarios');
+        } 
 
         try{
             // Buscar Usuario en BD

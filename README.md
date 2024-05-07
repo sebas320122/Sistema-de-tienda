@@ -80,7 +80,7 @@ Sistema web desarrollado para el negocio de tienda de conveniencia  "VaroTienda"
   - Seleccionar el boton "Ver" del registro que desee eliminar
   - Seleccionar el boton "Eliminar"
   
-## Contribucion
+## Contribución
 
 Para contribuir al proyecto siga los siguientes pasos:
 
